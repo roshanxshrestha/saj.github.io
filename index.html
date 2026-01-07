@@ -6,11 +6,21 @@
 
     <title>Sajeena Shrestha | Portfolio</title>
 
+    <!-- Primary SEO -->
+    <meta
+      name="description"
+      content="Official fashion model portfolio of Sajeena Shrestha featuring editorial, commercial, runway, and creative modeling work."
+    />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Sajeena Shrestha | Portfolio" />
+    <meta
+      property="og:title"
+      content="Sajeena Shrestha | Fashion Model Portfolio"
+    />
     <meta
       property="og:description"
-      content="Editorial, commercial, and fashion portfolio of Sajeena Shrestha."
+      content="Explore the official portfolio of Sajeena Shrestha showcasing editorial fashion, commercial campaigns, and creative projects."
     />
     <meta
       property="og:image"
@@ -18,13 +28,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sthasajeena.com.np/" />
+    <meta property="og:site_name" content="Sajeena Shrestha Portfolio" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sajeena Shrestha | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Sajeena Shrestha | Fashion Model Portfolio"
+    />
     <meta
       name="twitter:description"
-      content="Official fashion model portfolio of Sajeena Shrestha."
+      content="Editorial, commercial, and fashion modeling portfolio of Sajeena Shrestha."
     />
     <meta
       name="twitter:image"
@@ -32,7 +46,7 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 
     <style>
       html,
@@ -40,32 +54,126 @@
         margin: 0;
         padding: 0;
         background: #ffffff;
+        overflow-x: hidden; /* Prevents horizontal scroll from the zoom fix */
       }
 
-      /* Canva embed container */
+      .seo-hidden {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      /* Canva base */
       .canva-embed {
         position: relative;
         width: 100%;
         height: 0;
-        padding-top: 337.3353%; /* Canva natural height */
         overflow: hidden;
       }
 
+      /* 2. The Fix: Scale the iframe slightly to crop out the black bars */
       .canva-embed iframe {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
         border: none;
+        /* Increase scale to 101% or 102% to push the bars off-screen */
+        transform: scale(1.01);
+        transform-origin: center;
+      }
+
+      /* Desktop Canva */
+      .desktop-canva {
+        padding-top: 337.3353%;
+        display: block;
+      }
+
+      /* Mobile Canva */
+      .mobile-canva {
+        padding-top: 520%;
+        display: none;
+      }
+
+      /* Responsive switch */
+      @media (max-width: 820px) {
+        .desktop-canva {
+          display: none;
+        }
+        .mobile-canva {
+          padding-top: 520%;
+          display: block;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="canva-embed">
+    <section class="seo-hidden">
+      <h1>Sajeena Shrestha – Fashion Model Portfolio</h1>
+
+      <p>
+        Sajeena Shrestha is a professional fashion model based in Nepal, known
+        for her work in editorial fashion, commercial advertising, and creative
+        visual storytelling. Her portfolio features a curated selection of
+        high-fashion editorials, brand campaigns, studio shoots, and runway
+        appearances.
+      </p>
+
+      <p>
+        With experience collaborating with photographers, fashion designers,
+        makeup artists, and production teams, Sajeena Shrestha brings
+        versatility, confidence, and strong on-camera presence to every project.
+        Her work spans contemporary fashion, lifestyle branding, beauty
+        campaigns, and artistic editorials.
+      </p>
+
+      <p>
+        This official fashion model portfolio showcases professional modeling
+        work suitable for magazines, lookbooks, commercial advertisements,
+        social media campaigns, and creative productions. The portfolio
+        highlights a range of styles including editorial fashion, bridal shoots,
+        promotional content, and visual storytelling projects.
+      </p>
+
+      <p>
+        Available for fashion editorials, commercial shoots, brand
+        collaborations, music videos, and creative campaigns, Sajeena Shrestha
+        continues to develop a distinctive presence within the fashion and
+        modeling industry.
+      </p>
+
+      <h2>Fashion Modeling Work</h2>
+      <ul>
+        <li>Editorial fashion photography</li>
+        <li>Commercial and advertising campaigns</li>
+        <li>Runway and lookbook modeling</li>
+        <li>Bridal and beauty shoots</li>
+        <li>Music videos and creative productions</li>
+        <li>Brand and social media collaborations</li>
+      </ul>
+
+      <p>
+        This website serves as the official online portfolio of Sajeena
+        Shrestha, presenting selected works and professional modeling projects
+        for clients, agencies, photographers, and fashion brands.
+      </p>
+    </section>
+
+    <div class="canva-embed desktop-canva">
       <iframe
         loading="lazy"
         src="https://www.canva.com/design/DAG8tH3q8x0/jps6RZ7n-TjkNLih1oIP6Q/view?embed"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="canva-embed mobile-canva">
+      <iframe
+        loading="lazy"
+        src="https://www.canva.com/design/DAG9oRRdAJ8/ag5d_q0NDHXo-sHEkAHdEg/view?embed"
         allowfullscreen
       ></iframe>
     </div>
